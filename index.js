@@ -39,11 +39,7 @@ module.exports = function(source) {
     }
 
     var suffix;
-    if (query.noShortcut) {
         suffix = 'return T; }();';
-    } else {
-        suffix = 'return T.render.apply(T, arguments); };';
-    }
 
     return 'var H = require("hogan.js");\n' +
            'module.exports = function() { ' +
